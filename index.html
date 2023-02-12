@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advice Generator App</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/icon-dice.svg"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="advice-box">
+      <section class="advice-box__number">
+        <h2>Advice #<span id="advice-id">0</span></h2>
+      </section>
+
+      <article class="advice-box__text">
+        <q id="advice-quote"></q>
+      </article>
+
+      <span class="divider"></span>
+    </main>
+
+    <section>
+      <button class="advice-box__button" id="dado">
+        <img src="images/icon-dice.svg" alt="Dado" />
+      </button>
+    </section>
+
+    <footer class="attribution">
+      <span
+        >Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >.</span
+      >
+      <span
+        >Coded by
+        <a href="https://github.com/Andrew-Tsegaye" target="_blank"
+          >Andrew Tsegaye</a
+        >.</span
+      >
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

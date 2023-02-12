@@ -1,0 +1,123 @@
+:root {
+  --ligth-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+
+  --manrope: "Manrope", sans-serif;
+}
+
+body,
+.advice-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: var(--dark-grayish-blue);
+  font-family: var(--manrope);
+
+  justify-content: center;
+}
+
+.advice-box {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 470px;
+  min-height: 40%;
+  padding: 20px 20px 30px;
+  border-radius: 8px;
+  background-color: var(--grayish-blue);
+  text-align: center;
+
+  justify-content: space-between;
+}
+
+.advice-box__number {
+  margin: 10px 0;
+  color: var(--neon-green);
+  font-size: 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+
+.advice-box__text {
+  color: var(--ligth-cyan);
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+.divider {
+  background-image: url("../images/pattern-divider-mobile.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 40px;
+  margin: 15px 0;
+  fill: var(--ligth-cyan);
+
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 1024px) {
+  .divider {
+    background-image: url("../images/pattern-divider-desktop.svg");
+  }
+}
+
+.advice-box__button {
+  position: relative;
+  bottom: 2.5em;
+
+  background-color: var(--neon-green);
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+
+  transition-duration: 0.3s;
+}
+
+.advice-box__button:active {
+  box-shadow: 0px 0px 40px 5px var(--neon-green);
+}
+
+.advice-box__button img {
+  width: 2.2em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.spin-animation {
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1em;
+
+  color: var(--ligth-cyan);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--neon-green);
+}
